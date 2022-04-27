@@ -1,0 +1,11 @@
+REQUISITOS
+Possibilitar que os atendentes localizem os produtos e valores pelo pc.
+Permitir que seja verificado o estoque.
+Possibilitar o cadastro de clientes.
+Possibilidade de criar um pedido p/ o cliente.
+Possibilitar visualização de histórico e listagem de pedidos por cliente.
+Permite mandar um aviso de produtos que estão em falta e solicitar a compra e respectivamente a qtd mandando um email direto ao fornecedor.
+Permite que se de baixa automaticamente no ato da comclusão da venda.
+Permite o cliente escolher a forma de pagamento.
+Permite que seja somado ao final do dia o faturamento.
+Permitir que seja cadastrado os produtos.
