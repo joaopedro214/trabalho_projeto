@@ -1,6 +1,6 @@
 CREATE TABLE `Produtos` (
-	`id` INT NOT NULL,
-	`nome` varchar(255) NOT NULL AUTO_INCREMENT,
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`nome` varchar(255) NOT NULL,
 	`estoque` varchar(255) NOT NULL,
 	`marca` varchar(255) NOT NULL,
 	`categoria_id` INT NOT NULL,
@@ -10,20 +10,20 @@ CREATE TABLE `Produtos` (
 
 CREATE TABLE `Clientes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`nome` varchar(255) NOT NULL AUTO_INCREMENT,
-	`cpf` varchar(255) NOT NULL AUTO_INCREMENT,
-	`uf` varchar(255) NOT NULL AUTO_INCREMENT,
-	`cidade` varchar(255) NOT NULL AUTO_INCREMENT,
-	`bairro` varchar(255) NOT NULL AUTO_INCREMENT,
-	`cep` varchar(255) NOT NULL AUTO_INCREMENT,
-	`rua` varchar(255) NOT NULL AUTO_INCREMENT,
-	`endereco` varchar(255) NOT NULL AUTO_INCREMENT,
+	`nome` varchar(255) NOT NULL,
+	`cpf` varchar(255) NOT NULL,
+	`uf` varchar(255) NOT NULL,
+	`cidade` varchar(255) NOT NULL,
+	`bairro` varchar(255) NOT NULL,
+	`cep` varchar(255) NOT NULL,
+	`rua` varchar(255) NOT NULL,
+	`endereco` varchar(255) NOT NULL,
 	`telefone` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `Pedidos` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`valor` FLOAT NOT NULL,
 	`data` DATE NOT NULL,
 	`forma_pagamento` varchar(255) NOT NULL,
@@ -34,13 +34,13 @@ CREATE TABLE `Pedidos` (
 );
 
 CREATE TABLE `Categorias` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `Fornecedores` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
 	`cnpj` varchar(255) NOT NULL,
 	`telefone` varchar(255) NOT NULL,
@@ -49,21 +49,21 @@ CREATE TABLE `Fornecedores` (
 );
 
 CREATE TABLE `Vendedor` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
 	`telefone` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `Produtos_pedido` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`pedido_id` INT NOT NULL,
 	`produtos_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `Status_ped` (
-	`id` INT NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`descricao` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
