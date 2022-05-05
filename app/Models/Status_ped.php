@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status_ped extends Model
 {
-    use HasFactory;
+    protected $table = 'laravelorm';
+
+    protected $fillable = [
+        'descricao'
+    ];
 }
