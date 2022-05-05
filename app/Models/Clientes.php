@@ -7,5 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clientes extends Model
 {
-    use HasFactory;
+    protected $table = 'laravelorm';
+    
+
+    protected $fillable = [
+        'nome',
+        'cpf',
+        'UF',
+        'cidade',
+        'bairro',
+        'cep',
+        'rua',
+        'endereco',
+        'telefone'
+    ];
+
+    
 }
