@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status_ped extends Model
 {
-    protected $table = 'laravelorm';
+    protected $table = 'Status_ped';
 
     protected $fillable = [
         'descricao'
