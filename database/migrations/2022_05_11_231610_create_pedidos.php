@@ -20,7 +20,7 @@ class CreatePedidos extends Migration
             $table->string('forma_pagamento', 255);
             $table->foreignId('cliente_id')->constrained('cliente');
             $table->foreignId('vendedor_id')->constrained('vendedor');
-            $table->foreignId('status_ped_id')->constrained('pedido');
+            $table->foreignId('status_ped_id')->constrained('status_ped');
             $table->timestamps();
         });
     }
