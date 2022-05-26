@@ -22,7 +22,7 @@
    <div class="card-body">
     <p class="text-center py-2">Acesse:</p>
     <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
-    @csrf
+  
     <div class="row mb-3">
       <div class="col-md-12">
       <input class="form-control border-right-0" name="email" type="email" placeholder="E-mail" required="true" autofocus>
@@ -108,7 +108,8 @@
          <div class="card">
              <div class="card-body login-card-body">
                  <p class="login-box-msg">Sign in to start your session</p>
-                 <form action="../../index3.html" method="post">
+                 <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
+                    @csrf
                      <div class="input-group mb-3">
                          <input type="email" class="form-control" placeholder="Email">
                          <div class="input-group-append">
