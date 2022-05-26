@@ -22,7 +22,7 @@
    <div class="card-body">
     <p class="text-center py-2">Acesse:</p>
     <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
-    @csrf
+
     <div class="row mb-3">
       <div class="col-md-12">
       <input class="form-control border-right-0" name="email" type="email" placeholder="E-mail" required="true" autofocus>
@@ -58,7 +58,8 @@
   </div>
 </div>
 -->
- <html lang="en">
+ 
+<html lang="en">
 
  <head>
      <script nonce="5fd1075a-c72b-422b-809c-2920e0bf9d49">
@@ -108,9 +109,10 @@
          <div class="card">
              <div class="card-body login-card-body">
                  <p class="login-box-msg">Sign in to start your session</p>
-                 <form action="../../index3.html" method="post">
+                 <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
+                        @csrf
                      <div class="input-group mb-3">
-                         <input type="email" class="form-control" placeholder="Email">
+                         <input type="email" name="email" class="form-control" placeholder="Email">
                          <div class="input-group-append">
                              <div class="input-group-text">
                                  <span class="fas fa-envelope"></span>
@@ -118,7 +120,7 @@
                          </div>
                      </div>
                      <div class="input-group mb-3">
-                         <input type="password" class="form-control" placeholder="Password">
+                         <input type="password" name="password" class="form-control" placeholder="Password">
                          <div class="input-group-append">
                              <div class="input-group-text">
                                  <span class="fas fa-lock"></span>
@@ -128,7 +130,7 @@
                      <div class="row">
                          <div class="col-8">
                              <div class="icheck-primary">
-                                 <input type="checkbox" id="remember">
+                                 <input type="checkbox" name="remember" id="remember">
                                  <label for="remember">
                                      Remember Me
                                  </label>
