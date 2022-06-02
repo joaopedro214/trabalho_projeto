@@ -50,6 +50,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/fornecedores-save/{id?}', [FornecedoresController::class, 'save']);
     Route::get('/fornecedores-delete/{id}', [FornecedoresController::class, 'delete']);
 
+    Route::get('/clientes-edit/{id}', [ClientesController::class, 'edit']);
+    Route::post('/clientes-save/{id?}', [ClientesController::class, 'save']);
+    Route::get('/clientes-delete/{id}', [ClientesController::class, 'delete']);
 
 });
 
