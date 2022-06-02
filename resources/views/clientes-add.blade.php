@@ -21,7 +21,7 @@
                 </div>
                 <div class="mb-3">
                     <label>Nome</label>
-                    <input type="text" class="form-control" id="Name">
+                    <input type="text" class="form-control" id="Name" name = "name" value="{{$clientes->id}}">
                 </div>
                 <div class="mb-3">
                     <label>CPF/CNPJ</label>
