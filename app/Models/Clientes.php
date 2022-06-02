@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clientes extends Model
 {
-    protected $table = 'Clientes';
+    protected $table = 'cliente';
     
 
     protected $fillable = [
         'nome',
         'cpf',
-        'UF',
+        'uf',
         'cidade',
         'bairro',
         'cep',

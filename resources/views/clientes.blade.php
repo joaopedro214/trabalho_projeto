@@ -30,108 +30,29 @@
                         <th>E-mail</th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>Patrickones</td>
-                        <td>025.252.252.54/02211444544</td>
-                        <td>95960000</td>
-                        <td>Encantado</td>
-                        <td>Centro</td>
-                        <td>Ernesto Gregoire</td>
-                        <td>40</td>
-                        <td>Casa </td>
-                        <td>3751-1703</td>
-                        <td>8888888888888888888</td>
-                        <td>patrola@hotmail.com</td>
-                    </tr>
-
-
+                    @foreach ($lista as $clientes)
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/clientes-edit/{{$clientes->id}}">Editar</a>
+                                <a class="btn btn-danger" href="/clientes-delete/{{$clientes->id}}">Excluir</a>
+                            </td>
+                            <td>{{$clientes->codigo}}</td>
+                            <td>{{$clientes->nome}}</td>
+                            <td>{{$clientes->cpf}}</td>
+                            <td>{{$clientes->uf}}</td>
+                            <td>{{$clientes->cidade}}</td>
+                            <td>{{$clientes->bairro}}</td>
+                            <td>{{$clientes->cep}}</td>
+                            <td>{{$clientes->rua}}</td>
+                            <td>{{$clientes->endereco}}</td>
+                            <td>{{$clientes->telefone}}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
 
             </table>
-        </div>
-        <!-- /.card-body -->
-    </div>
+
 
 @stop

@@ -4,13 +4,17 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Cadastro Clientes</h3>
+            <h3 class="card-title">Cadastro</h3>
         </div>
         
         <div class="card-body">
-
-
-            <form>
+            @if (isset($erro))
+                <div class="alert alert-danger" role="alert">
+                    Ocorreram problemas ao tentar salvar o registro!
+                </div>
+            @endif
+            <form action="/clientes-save/{{$clientes->id}}" method="post">
+                @csrf
                 <div class="mb-3">
                     <label>Codigo</label>
                     <input type="name" class="form-control" id="id" disabled="true">
