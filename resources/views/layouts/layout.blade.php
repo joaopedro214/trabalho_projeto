@@ -195,6 +195,17 @@
             </a>
           </li>
         </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="/vendedores" class="nav-link">
+              <i class="fab fa-product-hunt"></i>
+              <p>
+                Vendedores
+              </p>
+            </a>
+          </li>
+        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

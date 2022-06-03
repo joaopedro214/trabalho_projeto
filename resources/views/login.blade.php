@@ -22,6 +22,7 @@
    <div class="card-body">
     <p class="text-center py-2">Acesse:</p>
     <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
+        
   
     <div class="row mb-3">
       <div class="col-md-12">
@@ -57,7 +58,10 @@
  </div>
   </div>
 </div>
--->
+
+ -->
+
+
  <html lang="en">
 
  <head>
@@ -111,7 +115,7 @@
                  <form class="mb-3" id="loginForm" method="POST" action="{{ route('login') }}">
                     @csrf
                      <div class="input-group mb-3">
-                         <input type="email" class="form-control" placeholder="Email">
+                         <input type="email" name="email" class="form-control" placeholder="Email">
                          <div class="input-group-append">
                              <div class="input-group-text">
                                  <span class="fas fa-envelope"></span>
@@ -119,7 +123,7 @@
                          </div>
                      </div>
                      <div class="input-group mb-3">
-                         <input type="password" class="form-control" placeholder="Password">
+                         <input type="password" name="password" class="form-control" placeholder="Password">
                          <div class="input-group-append">
                              <div class="input-group-text">
                                  <span class="fas fa-lock"></span>
@@ -129,7 +133,7 @@
                      <div class="row">
                          <div class="col-8">
                              <div class="icheck-primary">
-                                 <input type="checkbox" id="remember">
+                                 <input type="checkbox" name="checkbox" id="remember">
                                  <label for="remember">
                                      Remember Me
                                  </label>
@@ -170,5 +174,6 @@
 
      <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
  </body>
+
 
  </html>
