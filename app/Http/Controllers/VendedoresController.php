@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vendedor;
+use App\Models\Vendedores;
 use Illuminate\Http\Request;
 
-class VendedorController extends Controller
+class VendedoresController extends Controller
 {
     public function lista() {
-        $lista = Vendedor::all();
+        $lista = Vendedores::all();
         return view('vendedores', ['lista' => $lista]);
     }
 
     public function add() {
-        return view('vendedores-form', ['Vendedor' => new Vendedor()]);
+        return view('vendedores-form', ['vendedor' => new Vendedores()]);
     }
 
     public function edit($id) {
-        $vendedor = Vendedor::find($id);
+        $vendedor = Vendedores::find($id);
         return view('vendedores-form', ['vendedor' => $vendedor]);
     }
 
@@ -25,10 +25,10 @@ class VendedorController extends Controller
         $salvou = false;
         if (empty($id)) {
             // Se não recebeu um id, então deve criar um novo registro
-            $salvou = Vendedor::create($request->all());
+            $salvou = Vendedores::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = Vendedor::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = Vendedores::where('id', $id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -37,7 +37,7 @@ class VendedorController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = Vendedor::where('id', $id)->delete();
+        $excluiu = Vendedores::where('id', $id)->delete();
         if ($excluiu) {
             return $this->lista();
         }

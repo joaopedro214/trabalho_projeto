@@ -20,7 +20,7 @@
                 </div>
             @endif
 
-            <a href="/vendedor-add">
+            <a href="/vendedores-add">
                 <button type="button" class="btn btn-block btn-outline-primary mb-3">Nova</button>
             </a>
 

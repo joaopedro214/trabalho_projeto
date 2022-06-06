@@ -4,7 +4,7 @@ use App\Http\Controllers\FornecedoresController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutosController;
-use App\Http\Controllers\VendedorController;
+use App\Http\Controllers\VendedoresController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/fornecedores', [FornecedoresController::class,'lista']);
 
-    Route::get('/vendedores', [VendedorController::class,'lista']);
+    Route::get('/vendedores', [VendedoresController::class,'lista']);
     
     Route::get('/usuarios-add', [UsuariosController::class,'add']);
 
@@ -49,7 +49,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/fornecedores-add', [FornecedoresController::class,'add']);
 
-    Route::get('/vendedores-add', [VendedorController::class,'add']);
+    Route::get('/vendedores-add', [VendedoresController::class,'add']);
 
 
     Route::get('/fornecedores-edit/{id}', [FornecedoresController::class, 'edit']);
@@ -60,9 +60,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/clientes-save/{id?}', [ClientesController::class, 'save']);
     Route::get('/clientes-delete/{id}', [ClientesController::class, 'delete']);
 
-    Route::get('/vendedores-edit/{id}', [VendedorController::class, 'edit']);
-    Route::post('/vendedores-save/{id?}', [VendedorController::class, 'save']);
-    Route::get('/vendedores-delete/{id}', [VendedorController::class, 'delete']);
+    Route::get('/vendedores-edit/{id}', [VendedoresController::class, 'edit']);
+    Route::post('/vendedores-save/{id?}', [VendedoresController::class, 'save']);
+    Route::get('/vendedores-delete/{id}', [VendedoresController::class, 'delete']);
 
 });
 
