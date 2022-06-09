@@ -25,11 +25,11 @@
                 </div>
                 <div class="mb-3">
                     <label>CPF/CNPJ</label>
-                    <input type="text" class="form-control" id="cpf/cnpj">
+                    <input type="text" class="form-control" id="cpf/cnpj" value="{{$clientes->nome}}">
                 </div>
                 <div class="mb-3">
                     <label>CEP</label>
-                    <input type="text" class="form-control" id="cep">
+                    <input type="text" class="form-control" id="cep" value="{{$clientes->nome}}"> 
                 </div>
                 <div class="mb-3">
                   <label>Cidade</label>

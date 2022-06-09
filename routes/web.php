@@ -1,9 +1,12 @@
 <?php
+
+use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FornecedoresController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\StatusPedController;
 use App\Http\Controllers\VendedoresController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +43,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/fornecedores', [FornecedoresController::class,'lista']);
 
     Route::get('/vendedores', [VendedoresController::class,'lista']);
+
+    Route::get('/statusped', [StatusPedController::class,'lista']);
+
+    Route::get('/categorias', [CategoriasController::class,'lista']);
     
     Route::get('/usuarios-add', [UsuariosController::class,'add']);
 
@@ -50,6 +57,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/fornecedores-add', [FornecedoresController::class,'add']);
 
     Route::get('/vendedores-add', [VendedoresController::class,'add']);
+
+    Route::get('/statusped-add', [StatusPedController::class,'add']);
+
+    Route::get('/categorias-add', [CategoriasController::class,'add']);
 
 
     Route::get('/fornecedores-edit/{id}', [FornecedoresController::class, 'edit']);
@@ -63,6 +74,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/vendedores-edit/{id}', [VendedoresController::class, 'edit']);
     Route::post('/vendedores-save/{id?}', [VendedoresController::class, 'save']);
     Route::get('/vendedores-delete/{id}', [VendedoresController::class, 'delete']);
+
+    Route::get('/statusped-edit/{id}', [StatusPedController::class, 'edit']);
+    Route::post('/statusped-save/{id?}', [StatusPedController::class, 'save']);
+    Route::get('/statusped-delete/{id}', [StatusPedController::class, 'delete']);
+
+    Route::get('/categorias-edit/{id}', [CategoriasController::class, 'edit']);
+    Route::post('/categorias-save/{id?}', [CategoriasController::class, 'save']);
+    Route::get('/categorias-delete/{id}', [CategoriasController::class, 'delete']);
 
 });
 
