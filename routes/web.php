@@ -48,7 +48,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/vendedores', [VendedoresController::class,'lista']);
 
     Route::get('/produtos-add', [ProdutosController::class,'add']);
-    Route::get('/produtos-save', [ProdutosController::class,'save']);
+    Route::post('/produtos-save', [ProdutosController::class,'save']);
     Route::get('/produtos', [ProdutosController::class,'lista']);
     
 
@@ -71,6 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/categorias-edit/{id}', [CategoriasController::class, 'edit']);
     Route::post('/categorias-save/{id?}', [CategoriasController::class, 'save']);
     Route::get('/categorias-delete/{id}', [CategoriasController::class, 'delete']);
+    Route::get('/categorias', [CategoriasController::class,'lista']);
 
 });
 
