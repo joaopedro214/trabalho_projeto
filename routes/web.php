@@ -36,22 +36,6 @@ Route::group(['middleware' => ['auth']], function () {
     
  
     Route::get('/usuarios', [UsuariosController::class,'lista']);
-<<<<<<< HEAD
-=======
-    
-    Route::get('/clientes', [ClientesController::class,'lista']);
-
-    Route::get('/produtos', [ProdutosController::class,'lista']);
-
-    Route::get('/fornecedores', [FornecedoresController::class,'lista']);
-
-    Route::get('/vendedores', [VendedoresController::class,'lista']);
-
-    Route::get('/statusped', [StatusPedController::class,'lista']);
-
-    Route::get('/categorias', [CategoriasController::class,'lista']);
-    
->>>>>>> 0837897812d7c639567d064d7f456e1020fdfb75
     Route::get('/usuarios-add', [UsuariosController::class,'add']);
 
     Route::get('/clientes-add', [ClientesController::class,'add']);
@@ -63,17 +47,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/vendedores-add', [VendedoresController::class,'add']);
     Route::get('/vendedores', [VendedoresController::class,'lista']);
 
-<<<<<<< HEAD
     Route::get('/produtos-add', [ProdutosController::class,'add']);
     Route::get('/produtos-save', [ProdutosController::class,'save']);
     Route::get('/produtos', [ProdutosController::class,'lista']);
     
-=======
-    Route::get('/statusped-add', [StatusPedController::class,'add']);
-
-    Route::get('/categorias-add', [CategoriasController::class,'add']);
-
->>>>>>> 0837897812d7c639567d064d7f456e1020fdfb75
 
     Route::get('/fornecedores-edit/{id}', [FornecedoresController::class, 'edit']);
     Route::post('/fornecedores-save/{id?}', [FornecedoresController::class, 'save']);
