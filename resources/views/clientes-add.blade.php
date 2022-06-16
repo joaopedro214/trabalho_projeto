@@ -24,12 +24,21 @@
                     <input type="text" class="form-control" id="Nome" name="nome" value="{{$clientes->nome}}">
                 </div>
                 <div class="mb-3">
+<<<<<<< HEAD
                     <label>CPF</label>
                     <input type="text" class="form-control"  id="cpf" name="cpf" value="{{$clientes->cpf}}">
                 </div>
                 <div class="mb-3">
                     <label>CEP</label>
                     <input type="text" class="form-control" id="cep" name="cep" value="{{$clientes->cep}}">
+=======
+                    <label>CPF/CNPJ</label>
+                    <input type="text" class="form-control" id="cpf/cnpj" value="{{$clientes->nome}}">
+                </div>
+                <div class="mb-3">
+                    <label>CEP</label>
+                    <input type="text" class="form-control" id="cep" value="{{$clientes->nome}}"> 
+>>>>>>> 0837897812d7c639567d064d7f456e1020fdfb75
                 </div>
                 <div class="mb-3">
                   <label>Cidade</label>

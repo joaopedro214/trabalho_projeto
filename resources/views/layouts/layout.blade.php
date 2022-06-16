@@ -206,6 +206,28 @@
             </a>
           </li>
         </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="/statusped" class="nav-link">
+              <i class="fab fa-product-hunt"></i>
+              <p>
+                StatusPed
+              </p>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="/categorias" class="nav-link">
+              <i class="fab fa-product-hunt"></i>
+              <p>
+                Categorias
+              </p>
+            </a>
+          </li>
+        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

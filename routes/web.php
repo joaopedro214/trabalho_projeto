@@ -1,9 +1,12 @@
 <?php
+
+use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FornecedoresController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\StatusPedController;
 use App\Http\Controllers\VendedoresController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +36,22 @@ Route::group(['middleware' => ['auth']], function () {
     
  
     Route::get('/usuarios', [UsuariosController::class,'lista']);
+<<<<<<< HEAD
+=======
+    
+    Route::get('/clientes', [ClientesController::class,'lista']);
+
+    Route::get('/produtos', [ProdutosController::class,'lista']);
+
+    Route::get('/fornecedores', [FornecedoresController::class,'lista']);
+
+    Route::get('/vendedores', [VendedoresController::class,'lista']);
+
+    Route::get('/statusped', [StatusPedController::class,'lista']);
+
+    Route::get('/categorias', [CategoriasController::class,'lista']);
+    
+>>>>>>> 0837897812d7c639567d064d7f456e1020fdfb75
     Route::get('/usuarios-add', [UsuariosController::class,'add']);
 
     Route::get('/clientes-add', [ClientesController::class,'add']);
@@ -44,10 +63,17 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/vendedores-add', [VendedoresController::class,'add']);
     Route::get('/vendedores', [VendedoresController::class,'lista']);
 
+<<<<<<< HEAD
     Route::get('/produtos-add', [ProdutosController::class,'add']);
     Route::get('/produtos-save', [ProdutosController::class,'save']);
     Route::get('/produtos', [ProdutosController::class,'lista']);
     
+=======
+    Route::get('/statusped-add', [StatusPedController::class,'add']);
+
+    Route::get('/categorias-add', [CategoriasController::class,'add']);
+
+>>>>>>> 0837897812d7c639567d064d7f456e1020fdfb75
 
     Route::get('/fornecedores-edit/{id}', [FornecedoresController::class, 'edit']);
     Route::post('/fornecedores-save/{id?}', [FornecedoresController::class, 'save']);
@@ -60,6 +86,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/vendedores-edit/{id}', [VendedoresController::class, 'edit']);
     Route::post('/vendedores-save/{id?}', [VendedoresController::class, 'save']);
     Route::get('/vendedores-delete/{id}', [VendedoresController::class, 'delete']);
+
+    Route::get('/statusped-edit/{id}', [StatusPedController::class, 'edit']);
+    Route::post('/statusped-save/{id?}', [StatusPedController::class, 'save']);
+    Route::get('/statusped-delete/{id}', [StatusPedController::class, 'delete']);
+
+    Route::get('/categorias-edit/{id}', [CategoriasController::class, 'edit']);
+    Route::post('/categorias-save/{id?}', [CategoriasController::class, 'save']);
+    Route::get('/categorias-delete/{id}', [CategoriasController::class, 'delete']);
 
 });
 

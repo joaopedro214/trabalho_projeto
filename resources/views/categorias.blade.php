@@ -1,0 +1,54 @@
+@extends('layouts.layout', ['title' => 'Categorias'])
+
+@section('content')
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Lista de Categorias</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            @if (isset($erro))
+                <div class="alert alert-danger" role="alert">
+                    Ocorreram problemas ao tentar excluir o registro!
+                </div>
+            @endif
+
+            @if (isset($salvou))
+                <div class="alert alert-success" role="alert">
+                    Registro salvo com sucesso!
+                </div>
+            @endif
+
+            <a href="/categorias-add">
+                <button type="button" class="btn btn-block btn-outline-primary mb-3">Nova</button>
+            </a>
+
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Ações</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($lista as $categoria)
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="/categorias-edit/{{$categoria->id}}">Editar</a>
+                                <a class="btn btn-danger" href="/categorias-delete/{{$categoria->id}}">Excluir</a>
+                            </td>
+                            <td>{{$categoria->id}}</td>
+                            <td>{{$categoria->nome}}</td>
+                
+                        </tr>
+                    @endforeach
+                </tbody>
+                    
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+@stop
