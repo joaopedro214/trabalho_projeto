@@ -31,26 +31,23 @@ Route::group(['middleware' => ['auth']], function () {
 
     })->name('home');
     
+ 
     Route::get('/usuarios', [UsuariosController::class,'lista']);
-    
-    Route::get('/clientes', [ClientesController::class,'lista']);
-
-    Route::get('/produtos', [ProdutosController::class,'lista']);
-
-    Route::get('/fornecedores', [FornecedoresController::class,'lista']);
-
-    Route::get('/vendedores', [VendedoresController::class,'lista']);
-    
     Route::get('/usuarios-add', [UsuariosController::class,'add']);
 
     Route::get('/clientes-add', [ClientesController::class,'add']);
-
-    Route::get('/produtos-add', [ProdutosController::class,'add']);
-
+    Route::get('/clientes', [ClientesController::class,'lista']);
+    
+    Route::get('/fornecedores', [FornecedoresController::class,'lista']);
     Route::get('/fornecedores-add', [FornecedoresController::class,'add']);
 
     Route::get('/vendedores-add', [VendedoresController::class,'add']);
+    Route::get('/vendedores', [VendedoresController::class,'lista']);
 
+    Route::get('/produtos-add', [ProdutosController::class,'add']);
+    Route::get('/produtos-save', [ProdutosController::class,'save']);
+    Route::get('/produtos', [ProdutosController::class,'lista']);
+    
 
     Route::get('/fornecedores-edit/{id}', [FornecedoresController::class, 'edit']);
     Route::post('/fornecedores-save/{id?}', [FornecedoresController::class, 'save']);
